@@ -1,0 +1,55 @@
+kubectl version --client
+minikube status
+minikube start
+kubectl config get-contexts         --consultar ls contextos
+kubectl config current-context      --consultar el contexto actual
+kubectl config use-context minikube --cambiar de context
+kubectl config view --minify        --Configuración actual del context
+
+kubectl get nodes                   -- Consulta de los nodos actuales
+kubectl cluster-info                -- Consulta información del cluster
+docker image ls
+
+minikube -p minikube docker-env | Invoke-Expression -- configurar hacia minikube
+
+docker ps                            --Consultar contenedores que se han ejecutado
+docker container ls
+
+docker build -t virtualvuelo-app:latest .  -- Para construir la imagen
+
+kubectl apply -f mysql-configmap.yml
+kubectl apply -f virtualvuelo-deployment.yml
+kubectl apply -f mysql-deployment.yml
+
+kubectl delete pod [nombre del pod]
+kubectl get pods
+kubectl get pods -l app=virtualvuelo
+
+kubectl get nodes -o wide          --ver todo
+kubectl describe node [nombre del nodo]
+kubectl describe pod [nombre del pod]
+
+kubectl get pods --all-namespaces -o wide
+
+
+kubectl delete deployment virtualvuelo-app
+
+kubectl get ns
+kubectl get pods -n [nombre del namespace]
+kubectl get service virtualvuelo-service
+minikube service virtualvuelo-service
+
+ minikube dashboard
+
+
+minikube image load virtualvuelo-app:latest
+
+# Construir la imagen con el Dockerfile actualizado
+    docker build -t virtualvuelo-app:latest .
+
+# Verificar que la imagen se creó
+    docker build -t virtualvuelo-app:latest .
+docker images | findstr virtualvuelo-app
+
+host.docker.internal
+

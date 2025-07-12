@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mysql-config
+data:
+  MYSQL_DATABASE: "virtualvuelo"
+  MYSQL_ROOT_PASSWORD: "A03211026z_+*."
